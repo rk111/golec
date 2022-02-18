@@ -1,0 +1,672 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+export const ModalWindow=({setShow})=> {
+ return (
+   
+       <>
+            <div class="modal-header">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="blue-title">
+                            <h6>Qualification</h6>
+                        </div>
+                    </div>
+                </div>
+                {/* <div class="gray-divider mt-4 mb-4"></div> */}
+                <button type="button" class="close" onClick={()=>setShow(false)}>&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="qualification-table">
+                    <div class="table-responsive">
+                        <div class="tab-table-container">
+                            <table class="tab-table">
+                                <tbody class="tab-body">
+                                    <tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="tablinks active" onclick="openCity(event, '1')">level 1<br/>
+                                            Student</td>
+                                        <td class="tablinks " onclick="openCity(event, '2')">level 2<br/>
+                                            intern</td>
+                                        <td class="tablinks " onclick="openCity(event, '3')">level 3<br/>
+                                            job</td>
+                                        <td class="tablinks " onclick="openCity(event, '4')">level 4<br/>
+                                            Manager</td>
+                                        <td class="tablinks " onclick="openCity(event, '5')">level 5<br/>
+                                            Gmanager</td>
+                                        <td class="tablinks " onclick="openCity(event, '6')">level 6<br/>
+                                            CIO, CTO,CFO</td>
+                                        <td class="tablinks" onclick="openCity(event, '7')">level 7<br/>
+                                            CEO</td>
+                                    </tr>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                        <div class="tab-content-container">
+                            <div id="1" class="tabcontent table-content">
+                                <table class="qualification">
+                                    <tbody class="qualification-tbody">
+                                        <tr>
+                                            <td>Referrals</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Manager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>5</td>
+                                            <td>7</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gmanager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gmanager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>cIO,CTO,CFC</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>CEO</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>3</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Business
+                                                Ownership</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Creation of
+                                                new biz</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="2" class="tabcontent table-content">
+                                <table class="qualification">
+                                    <tbody class="qualification-tbody">
+                                        <tr>
+                                            <td>Referrals</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Manager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>5</td>
+                                            <td>7</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gmanager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gmanager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>cIO,CTO,CFC</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>CEO</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>3</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Business
+                                                Ownership</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Creation of
+                                                new biz</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="3" class="tabcontent table-content">
+                                <table class="qualification">
+                                    <tbody class="qualification-tbody">
+                                        <tr>
+                                            <td>Referrals</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Manager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>5</td>
+                                            <td>7</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gmanager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gmanager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>cIO,CTO,CFC</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>CEO</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>3</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Business
+                                                Ownership</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Creation of
+                                                new biz</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="4" class="tabcontent table-content">
+                                <table class="qualification">
+                                    <tbody class="qualification-tbody">
+                                        <tr>
+                                            <td>Referrals</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Manager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>5</td>
+                                            <td>7</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gmanager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gmanager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>cIO,CTO,CFC</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>CEO</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>3</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Business
+                                                Ownership</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Creation of
+                                                new biz</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="5" class="tabcontent table-content">
+                                <table class="qualification">
+                                    <tbody class="qualification-tbody">
+                                        <tr>
+                                            <td>Referrals</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Manager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>5</td>
+                                            <td>7</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gmanager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gmanager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>cIO,CTO,CFC</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>CEO</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>3</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Business
+                                                Ownership</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Creation of
+                                                new biz</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="6" class="tabcontent table-content">
+                                <table class="qualification">
+                                    <tbody class="qualification-tbody">
+                                        <tr>
+                                            <td>Referrals</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Manager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>5</td>
+                                            <td>7</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gmanager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gmanager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>cIO,CTO,CFC</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>CEO</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>3</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Business
+                                                Ownership</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Creation of
+                                                new biz</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="7" class="tabcontent table-content">
+                                <table class="qualification">
+                                    <tbody class="qualification-tbody">
+                                        <tr>
+                                            <td>Referrals</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Manager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>5</td>
+                                            <td>7</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gmanager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gmanager</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>cIO,CTO,CFC</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>CEO</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>4</td>
+                                            <td>3</td>
+                                            <td>2</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Business
+                                                Ownership</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>1</td>
+                                            <td>*</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Creation of
+                                                new biz</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>5</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </>
+      
+)
+
+}
