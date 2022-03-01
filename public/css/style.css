@@ -1237,29 +1237,9 @@ padding-left: 10px;
 ::-webkit-scrollbar-thumb:hover {
   background: #03dfc1;
 }
-.custom-tabs .nav-item:nth-child(1) a{
-    border-radius: 20px 0 0 0;
-    background: #5101E0 !important;
-    cursor: pointer;
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    font-size: 12px;
-    border: none !important;
-    padding: 20px !important;
-}
+
 .custom-tabs .nav-item a{
-    background: #5101E0;
     cursor: pointer;
-}
-/* .custom-tabs .nav-item{
-    border-radius: 20px 0 0 0;
-    background: #5101E0 !important;
-    cursor: pointer;
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    font-size: 12px;
-    border: none !important;
-    padding: 20px !important;
-} */
+    color: #fff;
+ }
+

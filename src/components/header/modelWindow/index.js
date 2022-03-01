@@ -3,7 +3,9 @@ import {useState} from 'react';
 import {Tabs, Tab,Nav, Row, Col} from "react-bootstrap";
 
 export const ModalWindow=({setShow})=> {
-    const [key, setKey] = useState('home');
+    const [key, setKey] = useState("1");
+
+    const handleSelect = (eventKey) => setKey(eventKey);
 
  return (
    
@@ -24,82 +26,53 @@ export const ModalWindow=({setShow})=> {
                 <div class="qualification-table">
                     <div class="table-responsive">
                     <Tab.Container  defaultActiveKey="1">
-                                          
-                           <Row>
-                            <Col className="tablinks">
-                            <Nav variant="pills" className="custom-tabs">
-                                <Nav.Item>
+                    <Nav onSelect={handleSelect}>
+                     <table class="tab-table custom-tabs">
+                        <tbody class="tab-body">
+                            <tr>
+                            <tr>
+                            <td style={{width: "13.1%"}}>&nbsp;</td>
+                            <td className={`tablinks ${key === "1" ? 'active':''}`}>
+                            <Nav.Item>
                                     <Nav.Link eventKey="1">level 1  Student</Nav.Link>
                                 </Nav.Item>
-                                <Nav.Item>
+                                </td>
+                                <td className={`tablinks ${key === "2" ? 'active':''}`}>
+                            <Nav.Item>
                                     <Nav.Link eventKey="2">level 2 intern</Nav.Link>
                                 </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link eventKey="3">level 3 job</Nav.Link>
+                                </td>
+                                <td className={`tablinks ${key === "3" ? 'active':''}`}>
+                                    <Nav.Item>
+                                    <Nav.Link eventKey="3">level 3  Jobs</Nav.Link>
                                 </Nav.Item>
+                                </td>
+                                <td className={`tablinks ${key === "4" ? 'active':''}`}>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="4">level 4  Manager</Nav.Link>
+                                <Nav.Link eventKey="4">level 4  Manager</Nav.Link>
                                 </Nav.Item>
+                                </td>
+                                <td className={`tablinks ${key === "5" ? 'active':''}`}>
                                 <Nav.Item>
-                                    <Nav.Link eventKey="5">level 5  Gmanager</Nav.Link>
+                                <Nav.Link eventKey="5">level 5  GManager</Nav.Link>
                                 </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link eventKey="6">level 6  CIO, CTO,CFO</Nav.Link>
+                                </td>
+                                <td className={`tablinks ${key === "6" ? 'active':''}`}>
+                              <Nav.Item>
+                            <Nav.Link eventKey="6">level 6  CEO</Nav.Link>
+                            </Nav.Item>
+                                </td>
+                                <td className={`tablinks ${key === "7" ? 'active':''}`}>
+                              <Nav.Item>
+                                <Nav.Link eventKey="7">level 7  CFO</Nav.Link>
                                 </Nav.Item>
-                                <Nav.Item>
-                                    <Nav.Link eventKey="7">level 7  CEO</Nav.Link>
-                                </Nav.Item>
-                            </Nav>
-                            
-                            </Col>
-                           </Row>
-                           <Nav>
-                            {/* <table class="tab-table">
-                                <tbody class="tab-body">
-                                    <tr>
-                                    <tr>
-                                        <td></td>
-                                        <td class="tablinks active" eventKey="1">
-                                          <Nav.Item>
-                                            <Nav.Link eventKey="1">level 1  Student</Nav.Link>
-                                            </Nav.Item>
-                                           </td>
-                                        <td class="tablinks" eventKey="2">
-                                             <Nav.Item>
-                                            <Nav.Link eventKey="2">level 2  Student</Nav.Link>
-                                            </Nav.Item>
-                                            </td>
-                                        <td class="tablinks " onclick="openCity(event, '3')">
-                                             <Nav.Item>
-                                               <Nav.Link eventKey="3">level 3  Jobs</Nav.Link>
-                                            </Nav.Item>
-                                            </td>
-                                        <td class="tablinks " onclick="openCity(event, '4')">
-                                          <Nav.Item>
-                                            <Nav.Link eventKey="4">level 4  Manager</Nav.Link>
-                                           </Nav.Item>
-                                            </td>
-                                        <td class="tablinks " onclick="openCity(event, '5')">
-                                            <Nav.Item>
-                                            <Nav.Link eventKey="5">level 5  GManager</Nav.Link>
-                                           </Nav.Item>
-                                           </td>
-                                        <td class="tablinks " onclick="openCity(event, '6')">
-                                        <Nav.Item>
-                                            <Nav.Link eventKey="6">level 6  CEO</Nav.Link>
-                                           </Nav.Item>
-                                           </td>
-                                        <td class="tablinks" onclick="openCity(event, '7')">
-                                        <Nav.Item>
-                                            <Nav.Link eventKey="7">level 7  CFO</Nav.Link>
-                                           </Nav.Item>
-                                            </td>
-                                    </tr>
-                                    </tr>
+                            </td>
+                            </tr>
+                            </tr>
                                 </tbody>
-
-                            </table>  */}
-                            </Nav>
+                            </table>   
+                            </Nav>      
+                           
                       
                         <div class="tab-content-container">
                         <Tab.Content>
