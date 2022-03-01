@@ -1,4 +1,17 @@
+import {  useQuery } from "react-query";
+import { Get } from "../utils/axiosUtils";
+
 export const History=()=>{
+
+    const { data } = useQuery(
+        ["history"],() => Get("data/history.json"),
+        {         
+          retry: false,
+          refetchOnWindowFocus: false        
+        }
+      );
+
+
   return (
     <div class="current-stack-box">
     <div class="row">
@@ -20,31 +33,16 @@ export const History=()=>{
                 </tr>
             </thead>
             <tbody>
-                <tr class="table-row">
-                    <td>19/11</td>
-                    <td class="td-des">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</td>
-                    <td>8740</td>
-                </tr>
-                <tr class="table-row">
-                    <td>19/11</td>
-                    <td class="td-des">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</td>
-                    <td>8740</td>
-                </tr>
-                <tr class="table-row">
-                    <td>19/11</td>
-                    <td class="td-des">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</td>
-                    <td>8740</td>
-                </tr>
-                <tr class="table-row">
-                    <td>19/11</td>
-                    <td class="td-des">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</td>
-                    <td>8740</td>
-                </tr>
-                <tr class="table-row">
-                    <td>19/11</td>
-                    <td class="td-des">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</td>
-                    <td>8740</td>
-                </tr>
+            {data && data["data"].map((item, i) => { 
+              return (
+                <tr class="table-row" key={i}>
+                    <td>{item.date}</td>
+                    <td class="td-des">{item.description}</td>
+                    <td>{item.amount}</td>
+                </tr>               
+               );
+             })}
+                
             </tbody>
         </table>
     </div>

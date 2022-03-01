@@ -1,5 +1,17 @@
+import {  useQuery } from "react-query";
+import { Get } from "../../utils/axiosUtils";
+
 export const CurrentStake=()=>{
+ 
+    const { data } = useQuery(
+        ["currentstake"],() => Get("data/currentstack.json"),
+        {         
+          retry: false,
+          refetchOnWindowFocus: false        
+        }
+      );
     
+
  return (
     <div class="current-stack-box">
     <div class="row">
@@ -22,7 +34,7 @@ export const CurrentStake=()=>{
             <thead>
                 <tr>
                     <th>Date</th>
-                    <th>Tiltle</th>
+                    <th>Title</th>
                     <th>stake</th>
                     <th>rewards</th>
                     <th>tenure</th>
@@ -30,60 +42,23 @@ export const CurrentStake=()=>{
                 </tr>
             </thead>
             <tbody>
-                <tr class="table-row">
-                    <td>19/11</td>
-                    <td class="td-title">Board Logojd</td>
-                    <td>798</td>
-                    <td>948</td>
-                    <td>748</td>
-                    <td>19/11/21</td>
-                    <td><a href="#" class="extend">extend</a></td>
-                    <td><a href="#" class="upgrade">upgrade</a></td>
-                </tr>
+               
+            {data && data["data"].map((item, i) => {      
 
-                <tr class="table-row">
-                    <td>19/11</td>
-                    <td class="td-title">Guard Logojd</td>
-                    <td>798</td>
-                    <td>948</td>
-                    <td>748</td>
-                    <td>19/11/21</td>
+               return (
+               <tr class="table-row" key={i}>
+                    <td>{item.date}</td>
+                    <td class="td-title">{item.title}</td>
+                    <td>{item.stake}</td>
+                    <td>{item.reward}</td>
+                    <td>{item.tenure}</td>
+                    <td>{item.expiry}</td>
                     <td><a href="#" class="extend">extend</a></td>
                     <td><a href="#" class="upgrade">upgrade</a></td>
                 </tr>
-
-                <tr class="table-row">
-                    <td>19/11</td>
-                    <td class="td-title">Logojdadil</td>
-                    <td>798</td>
-                    <td>948</td>
-                    <td>748</td>
-                    <td>19/11/21</td>
-                    <td><a href="#" class="extend">extend</a></td>
-                    <td><a href="#" class="upgrade">upgrade</a></td>
-                </tr>
-
-                <tr class="table-row">
-                    <td>19/11</td>
-                    <td class="td-title">Enigma Logojd</td>
-                    <td>798</td>
-                    <td>948</td>
-                    <td>748</td>
-                    <td>19/11/21</td>
-                    <td><a href="#" class="extend">extend</a></td>
-                    <td><a href="#" class="upgrade">upgrade</a></td>
-                </tr>
-
-                <tr class="table-row">
-                    <td>19/11</td>
-                    <td class="td-title">Frost Logojd</td>
-                    <td>798</td>
-                    <td>948</td>
-                    <td>748</td>
-                    <td>19/11/21</td>
-                    <td><a href="#" class="extend">extend</a></td>
-                    <td><a href="#" class="upgrade">upgrade</a></td>
-                </tr>
+                );
+                })}
+               
             </tbody>
         </table>
     </div>
