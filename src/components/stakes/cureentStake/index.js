@@ -13,24 +13,24 @@ export const CurrentStake=()=>{
     
 
  return (
-    <div class="current-stack-box">
-    <div class="row">
-        <div class="col-md-6 col-sm-6 col-6 ">
-            <div class="blue-title">
+    <div className="current-stack-box">
+    <div className="row">
+        <div className="col-md-6 col-sm-6 col-6 ">
+            <div className="blue-title">
                 <h6>Current Stakes</h6>
             </div>
         </div>
-        <div class="col-md-6 col-sm-6 col-6">
-            <div class="blue-title">
+        <div className="col-md-6 col-sm-6 col-6">
+            <div className="blue-title">
                 <h6>Total stake</h6>
             </div>
         </div>
     </div>
-    <div class="gray-divider mt-4 mb-4"></div>
+    <div className="gray-divider mt-4 mb-4"></div>
 
-    <div class="table-responsive max-htable ">
+    <div className="table-responsive max-htable ">
 
-        <table class="table">
+        <table className="table">
             <thead>
                 <tr>
                     <th>Date</th>
@@ -46,15 +46,15 @@ export const CurrentStake=()=>{
             {data && data["data"].map((item, i) => {      
 
                return (
-               <tr class="table-row" key={i}>
+               <tr className="table-row" key={i}>
                     <td>{item.date}</td>
-                    <td class="td-title">{item.title}</td>
+                    <td className="td-title">{item.title}</td>
                     <td>{item.stake}</td>
                     <td>{item.reward}</td>
                     <td>{item.tenure}</td>
                     <td>{item.expiry}</td>
-                    <td><a href="#" class="extend">extend</a></td>
-                    <td><a href="#" class="upgrade">upgrade</a></td>
+                    <td><a href="#" className="extend">extend</a></td>
+                    <td><a href="#" className="upgrade">upgrade</a></td>
                 </tr>
                 );
                 })}

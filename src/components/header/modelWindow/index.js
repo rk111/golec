@@ -1,34 +1,91 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import {useState} from 'react';
-import {Tabs, Tab,Nav, Row, Col} from "react-bootstrap";
+import {  useQuery } from "react-query";
+import { Get } from "../../utils/axiosUtils";
+import {Tab,Nav} from "react-bootstrap";
 
 export const ModalWindow=({setShow})=> {
     const [key, setKey] = useState("1");
 
     const handleSelect = (eventKey) => setKey(eventKey);
 
+    const { data } = useQuery(
+        ["qualification"],() => Get("data/level1.json"),
+        {         
+            retry: false,
+            refetchOnWindowFocus: false        
+        }
+        );
+        const { data:level_1_data } = useQuery(
+            ["qualification"],() => Get("data/level2.json"),
+            {         
+                retry: false,
+                refetchOnWindowFocus: false        
+            }
+        );
+
+        const { data:level_2_data } = useQuery(
+            ["qualification"],() => Get("data/level2.json"),
+            {         
+                retry: false,
+                refetchOnWindowFocus: false        
+            }
+        );
+        
+        const { data:level_3_data } = useQuery(
+            ["qualification"],() => Get("data/level3.json"),
+            {         
+                retry: false,
+                refetchOnWindowFocus: false        
+            }
+        );
+        
+        const { data:level_4_data } = useQuery(
+            ["qualification"],() => Get("data/level4.json"),
+            {         
+                retry: false,
+                refetchOnWindowFocus: false        
+            }
+        );
+
+        const { data:level_5_data } = useQuery(
+            ["qualification"],() => Get("data/level5.json"),
+            {         
+                retry: false,
+                refetchOnWindowFocus: false        
+            }
+        );
+
+        const { data:level_6_data } = useQuery(
+            ["qualification"],() => Get("data/level6.json"),
+            {         
+                retry: false,
+                refetchOnWindowFocus: false        
+            }
+        );
+        
  return (
    
        <>
-            <div class="modal-header">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="blue-title">
+            <div className="modal-header">
+                <div className="row">
+                    <div className="col-md-12">
+                        <div className="blue-title">
                             <h6>Qualification</h6>
                         </div>
                     </div>
                 </div>
-                {/* <div class="gray-divider mt-4 mb-4"></div> */}
-                <button type="button" class="close" onClick={()=>setShow(false)}>&times;</button>
+                {/* <div className="gray-divider mt-4 mb-4"></div> */}
+                <button type="button" className="close" onClick={()=>setShow(false)}>&times;</button>
             </div>
 
-            <div class="modal-body">
-                <div class="qualification-table">
-                    <div class="table-responsive">
+            <div className="modal-body">
+                <div className="qualification-table">
+                    <div className="table-responsive">
                     <Tab.Container  defaultActiveKey="1">
                     <Nav onSelect={handleSelect}>
-                     <table class="tab-table custom-tabs">
-                        <tbody class="tab-body">
+                     <table className="tab-table custom-tabs">
+                        <tbody className="tab-body">
                             <tr>
                             <tr>
                             <td style={{width: "13.1%"}}>&nbsp;</td>
@@ -74,634 +131,159 @@ export const ModalWindow=({setShow})=> {
                             </Nav>      
                            
                       
-                        <div class="tab-content-container">
+                        <div className="tab-content-container">
                         <Tab.Content>
                         <Tab.Pane eventKey="1">
-                            <div  class="tabcontent table-content">
-                                <table class="qualification">
-                                    <tbody class="qualification-tbody">
+                            <div  className="tabcontent table-content">
+                                <table className="qualification">
+                                    <tbody className="qualification-tbody">
+                                    {data && data["data"].map((item, i) => {    
+                                       return( 
                                         <tr>
-                                            <td>Referrals</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Manager1</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>5</td>
-                                            <td>7</td>
-                                            <td>10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gmanager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gmanager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>cIO,CTO,CFC</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>CEO</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>3</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Business
-                                                Ownership</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Creation of
-                                                new biz</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>5</td>
-                                        </tr>
+                                                <td>{item.name}</td>
+                                                <td>{item.level1}</td>
+                                                <td>{item.level2}</td>
+                                                <td>{item.level3}</td>
+                                                <td>{item.level4}</td>
+                                                <td>{item.level5}</td>
+                                                <td>{item.level6}</td>
+                                                <td>{item.level7}</td>
+                                            </tr>
+                                      );
+                                    })}
+                                       
                                     </tbody>
                                 </table>
                             </div>
                             </Tab.Pane>
                             <Tab.Pane eventKey="2">
-                            <div  class="tabcontent table-content">
-                                <table class="qualification">
-                                    <tbody class="qualification-tbody">
+                            <div  className="tabcontent table-content">
+                                <table className="qualification">
+                                    <tbody className="qualification-tbody">
+                                    {level_1_data && level_1_data["data"].map((item, i) => {    
+                                       return( 
                                         <tr>
-                                            <td>Referrals</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Manager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>5</td>
-                                            <td>7</td>
-                                            <td>10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gmanager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gmanager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>cIO,CTO,CFC</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>CEO</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>3</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Business
-                                                Ownership</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Creation of
-                                                new biz</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>5</td>
-                                        </tr>
+                                                <td>{item.name}</td>
+                                                <td>{item.level1}</td>
+                                                <td>{item.level2}</td>
+                                                <td>{item.level3}</td>
+                                                <td>{item.level4}</td>
+                                                <td>{item.level5}</td>
+                                                <td>{item.level6}</td>
+                                                <td>{item.level7}</td>
+                                            </tr>
+                                      );
+                                    })}
                                     </tbody>
                                 </table>
                             </div>
                             </Tab.Pane>
                             <Tab.Pane eventKey="3">
-                            <div id="3" class="tabcontent table-content">
-                                <table class="qualification">
-                                    <tbody class="qualification-tbody">
+                            <div id="3" className="tabcontent table-content">
+                                <table className="qualification">
+                                    <tbody className="qualification-tbody">
+                                    {level_2_data && level_2_data["data"].map((item, i) => {    
+                                       return( 
                                         <tr>
-                                            <td>Referrals</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Manager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>5</td>
-                                            <td>7</td>
-                                            <td>10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gmanager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gmanager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>cIO,CTO,CFC</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>CEO</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>3</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Business
-                                                Ownership</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Creation of
-                                                new biz</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>5</td>
-                                        </tr>
+                                                <td>{item.name}</td>
+                                                <td>{item.level1}</td>
+                                                <td>{item.level2}</td>
+                                                <td>{item.level3}</td>
+                                                <td>{item.level4}</td>
+                                                <td>{item.level5}</td>
+                                                <td>{item.level6}</td>
+                                                <td>{item.level7}</td>
+                                            </tr>
+                                      );
+                                    })}
                                     </tbody>
                                 </table>
                             </div>
                             </Tab.Pane>
                             <Tab.Pane eventKey="4">
-                            <div id="4" class="tabcontent table-content">
-                                <table class="qualification">
-                                    <tbody class="qualification-tbody">
+                            <div id="4" className="tabcontent table-content">
+                                <table className="qualification">
+                                    <tbody className="qualification-tbody">
+                                    {level_3_data && level_3_data["data"].map((item, i) => {    
+                                       return( 
                                         <tr>
-                                            <td>Referrals</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Manager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>5</td>
-                                            <td>7</td>
-                                            <td>10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gmanager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gmanager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>cIO,CTO,CFC</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>CEO</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>3</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Business
-                                                Ownership</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Creation of
-                                                new biz</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>5</td>
-                                        </tr>
+                                                <td>{item.name}</td>
+                                                <td>{item.level1}</td>
+                                                <td>{item.level2}</td>
+                                                <td>{item.level3}</td>
+                                                <td>{item.level4}</td>
+                                                <td>{item.level5}</td>
+                                                <td>{item.level6}</td>
+                                                <td>{item.level7}</td>
+                                            </tr>
+                                      );
+                                    })}
                                     </tbody>
                                 </table>
                             </div>
                             </Tab.Pane>
                             <Tab.Pane eventKey="5">
-                            <div id="5" class="tabcontent table-content">
-                                <table class="qualification">
-                                    <tbody class="qualification-tbody">
+                            <div id="5" className="tabcontent table-content">
+                                <table className="qualification">
+                                    <tbody className="qualification-tbody">
+                                    {level_4_data && level_4_data["data"].map((item, i) => {    
+                                       return( 
                                         <tr>
-                                            <td>Referrals</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Manager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>5</td>
-                                            <td>7</td>
-                                            <td>10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gmanager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gmanager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>cIO,CTO,CFC</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>CEO</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>3</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Business
-                                                Ownership</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Creation of
-                                                new biz</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>5</td>
-                                        </tr>
+                                                <td>{item.name}</td>
+                                                <td>{item.level1}</td>
+                                                <td>{item.level2}</td>
+                                                <td>{item.level3}</td>
+                                                <td>{item.level4}</td>
+                                                <td>{item.level5}</td>
+                                                <td>{item.level6}</td>
+                                                <td>{item.level7}</td>
+                                            </tr>
+                                      );
+                                    })}
                                     </tbody>
                                 </table>
                             </div>
                             </Tab.Pane>
                             <Tab.Pane eventKey="6">
-                            <div id="6" class="tabcontent table-content">
-                                <table class="qualification">
-                                    <tbody class="qualification-tbody">
+                            <div id="6" className="tabcontent table-content">
+                                <table className="qualification">
+                                    <tbody className="qualification-tbody">
+                                    {level_5_data && level_5_data["data"].map((item, i) => {    
+                                       return( 
                                         <tr>
-                                            <td>Referrals</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Manager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>5</td>
-                                            <td>7</td>
-                                            <td>10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gmanager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gmanager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>cIO,CTO,CFC</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>CEO</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>3</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Business
-                                                Ownership</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Creation of
-                                                new biz</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>5</td>
-                                        </tr>
+                                                <td>{item.name}</td>
+                                                <td>{item.level1}</td>
+                                                <td>{item.level2}</td>
+                                                <td>{item.level3}</td>
+                                                <td>{item.level4}</td>
+                                                <td>{item.level5}</td>
+                                                <td>{item.level6}</td>
+                                                <td>{item.level7}</td>
+                                            </tr>
+                                      );
+                                    })}
                                     </tbody>
                                 </table>
                             </div>
                             </Tab.Pane>
                             <Tab.Pane eventKey="7">
-                            <div id="7" class="tabcontent table-content">
-                                <table class="qualification">
-                                    <tbody class="qualification-tbody">
+                            <div id="7" className="tabcontent table-content">
+                                <table className="qualification">
+                                    <tbody className="qualification-tbody">
+                                    {level_6_data && level_6_data["data"].map((item, i) => {    
+                                       return( 
                                         <tr>
-                                            <td>Referrals</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Manager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>5</td>
-                                            <td>7</td>
-                                            <td>10</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gmanager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gmanager</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>cIO,CTO,CFC</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>CEO</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>4</td>
-                                            <td>3</td>
-                                            <td>2</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Business
-                                                Ownership</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>1</td>
-                                            <td>*</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Creation of
-                                                new biz</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>1</td>
-                                            <td>2</td>
-                                            <td>3</td>
-                                            <td>5</td>
-                                        </tr>
+                                                <td>{item.name}</td>
+                                                <td>{item.level1}</td>
+                                                <td>{item.level2}</td>
+                                                <td>{item.level3}</td>
+                                                <td>{item.level4}</td>
+                                                <td>{item.level5}</td>
+                                                <td>{item.level6}</td>
+                                                <td>{item.level7}</td>
+                                            </tr>
+                                      );
+                                    })}
                                     </tbody>
                                 </table>
                             </div>
