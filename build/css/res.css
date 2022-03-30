@@ -1,0 +1,208 @@
+@media only screen and (min-width: 1500px) {
+    .user-info-img {
+        width : 150px;
+        height: 150px;
+    }
+
+
+    .info-image-box ul li h5 {
+        font-size: 30px;
+    }
+
+    .info-image-box ul li p {
+        font-size: 30px;
+    }
+
+    .blue-title h6 {
+        font-size: 27px;
+    }
+
+    th {
+        font-size: 20px;
+    }
+
+    td {
+        font-size: 20px;
+    }
+
+    .refferal-id ul li p {
+        font-size: 15px;
+    }
+
+    .refferal-id ul li img {
+        width: 15px;
+    }
+
+    .tab button {
+        font-size: 20px;
+    }
+
+    .refferal-details p {
+        font-size: 20px;
+    }
+
+    .cafe-box h2 {
+        font-size: 30px;
+    }
+
+    .cafe-box p {
+        font-size: 20px;
+    }
+
+    .cafe-box a {
+        font-size: 30px;
+    }
+
+    .header-logo {
+        width: 180px;
+    }
+
+    .pro-img {
+        width : 100px;
+        height: 100px;
+    }
+
+    .progress {
+        width : 85px;
+        height: 85px !important;
+        background: none !important;
+    }
+
+    .progress-holder {
+        top : -10px;
+        left: 10px;
+    }
+
+    .header-right ul li h4 {
+        font-size: 25px;
+    }
+
+    .header-right ul li p {
+        font-size: 20px;
+    }
+
+    .tab button {
+        font-size: 12px;
+        padding  : 20px 20px 12px 20px;
+    }
+}
+
+
+@media only screen and (min-width: 1300px) {
+
+    .user-info-img {
+        width : 100px;
+        height: 100px;
+    }
+
+
+    .info-image-box ul li h5 {
+        font-size: 20px;
+    }
+
+    .info-image-box ul li p {
+        font-size: 20px;
+    }
+
+    .blue-title h6 {
+        font-size: 20px;
+    }
+
+    th {
+        font-size: 16px;
+    }
+
+    td {
+        font-size: 14px;
+    }
+
+    .refferal-id ul li p {
+        font-size: 15px;
+    }
+
+    .refferal-id ul li img {
+        width: 15px;
+    }
+
+    .refferal-details p {
+        font-size: 14px;
+    }
+
+    .cafe-box h2 {
+        font-size: 25px;
+    }
+
+    .cafe-box p {
+        font-size: 16px;
+    }
+
+    .cafe-box a {
+        font-size: 20px;
+    }
+
+    .pro-img {
+        width : 70px;
+        height: 70px;
+    }
+
+    .progress {
+        width : 85px;
+        height: 85px;
+    }
+
+    .progress-holder {
+        top : -7px;
+        left: 12px;
+    }
+
+}
+
+
+
+
+
+@media only screen and (max-width: 990px) {
+
+    .welcom-user-image {
+        margin: 40px 0 10px 0;
+    }
+
+    .current-stack-box {
+        margin: 20px 0;
+    }
+
+    .new-businnes {
+        margin: 20px 0;
+    }
+
+    .pro-info-strip ul li:last-child p {
+        text-align: right;
+    }
+
+    .tab-body tr td:first-child {
+        display: none;
+    }
+
+    .tab-table {
+        margin-bottom: 0;
+    }
+
+    .tab-table-container {
+        overflow-y: auto;
+    }
+
+    tbody.tab-body tr td:nth-child(2) {
+        border-top-left-radius: 0;
+    }
+
+    tbody.tab-body tr td:last-child {
+        border-top-right-radius: 0;
+    }
+
+    .tab-table-container {
+        width        : 100%;
+        padding      : 0;
+        border-radius: 20px;
+    }
+
+}
