@@ -3,6 +3,7 @@ import { CurrentStake } from "../stakes/cureentStake";
 import { Network } from "../network";
 import { History } from "../history";
 import { Card } from "../core/card";
+import { BusinessSlider } from "../business/NewBusinessSlider";
 
 export const Home=()=>{
 
@@ -82,20 +83,20 @@ export const Home=()=>{
           <div className="col-md-3 wow fadeInUp">
             <Card title="Create New Business">
             <div class="cafe-box-container">
-              <ConentBox/>
-              <ConentBox/>
+              <ConentBox />
+              <ConentBox />
               </div>
             </Card>
           </div>
           <div className="col-md-6 wow fadeInUp">
            <Card title="Create New Business">
-              <ConentBox1/>
+             <BusinessSlider /> 
             </Card>
         </div>
         <div className="col-md-3 wow fadeInUp">
           <Card title="Create New Business">
             <div class="cafe-box-container">
-              <ConentBox/>                       
+             <ConentBox1 />                   
               </div>
               <div class="view-profile-btn" data-toggle="modal" data-target="#myModal">
                 <a href="javascript:void(0)">View Profile</a>

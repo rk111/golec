@@ -124,13 +124,14 @@ const { data } = useQuery(
 
 
   useEffect(() => {
-    const interval = setInterval(async () => {
-      getWalletDetails();
-      //wallet checking interval 2sec
-    }, 5000);
-    return () => {
-      clearInterval(interval);
-    };
+    getWalletDetails();
+    // const interval = setInterval(async () => {
+    //   getWalletDetails();
+    //   //wallet checking interval 2sec
+    // }, 5000);
+    // return () => {
+    //   clearInterval(interval);
+    // };
   });
 
 // console.log(myDetails)

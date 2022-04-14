@@ -35,10 +35,10 @@ export const CurrentStake=()=>{
                 <tr>
                     <th>Date</th>
                     <th>Title</th>
-                    <th>stake</th>
-                    <th>rewards</th>
-                    <th>tenure</th>
-                    <th>expiry</th>
+                    <th>Stake</th>
+                    <th>Rewards</th>
+                    <th>Tenure</th>
+                    <th>Expiry</th>
                 </tr>
             </thead>
             <tbody>
